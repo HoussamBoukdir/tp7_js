@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Personne(id, n, p){
+            this.id=id;
+            this.nom=n;
+            this.prenom=p;
+        }
+
+        let p1=new Personne(1, "N1", "P1");
+        let p2=new Personne(2, "N2", "P2");
+        let p3=new Personne(3, "N3", "P3");
+
+        function Personnes(){
+            this.date=[];
+            this.ajouter=(p)=>{
+                this.date.push(p);
+            }
+            this.supprimer=(id)=>{
+                for(let i=0; i<this.data.length; i++){
+                    if(this.data[i].id==id){
+                        this.data.splice(i, 1);
+                     
+                    }
+                }
+            }
+            this.afficher=()=>{
+                console.log(this.data)
+            }
+        }
+
+        let employes=new Personnes();
+        employes.ajouter(p1);
+        employes.ajouter(p2);
+        employes.ajouter(p3);
+        employes.supprimer(2);
+        employes.afficher();
+    </script>
+</body>
+</html>
